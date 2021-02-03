@@ -151,8 +151,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -319,8 +319,8 @@ post_meta:
 post_wordcount:
   item_text: true
   wordcount: true
-  #min2read: true
-  separated_meta: true
+  min2read: false
+  separated_meta: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -374,7 +374,7 @@ han: false
 # swiftype_key: ejzXADyBomBd4f_Cam8n
 
 # Baidu Analytics ID
-#baidu_analytics: 681e8ab3f6ae4ad2b3453b6d91601aa8
+baidu_analytics: 681e8ab3f6ae4ad2b3453b6d91601aa8
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -421,6 +421,8 @@ valine_comment:
   leancloud_appid: NPXO452Cf2WXPOsJk9C36TJ4-MdYXbMMI
   leancloud_appkey: hbavG9LDlr4bEH3LQYBm1c0V
   placeholder: "留下你的评论吧（支持Markdown）~"
+  #visitor: true
+  #comment_count: true
 # Gentie productKey
 #gentie_productKey:
 
@@ -528,7 +530,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: NPXO452Cf2WXPOsJk9C36TJ4-MdYXbMMI
   app_key: hbavG9LDlr4bEH3LQYBm1c0V
 
