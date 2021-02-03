@@ -315,6 +315,7 @@ post_meta:
   updated_at: true
   categories: true
 
+
 # Post wordcount display settings
 post_wordcount:
   item_text: true
@@ -354,7 +355,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright
+highlight_theme: normal
 
 
 # ---------------------------------------------------------------
@@ -457,12 +458,12 @@ baidushare: true
 ##  type: button
 
 # Share
-jiathis: true
+jiathis: false
 # Warning: JiaThis does not support https.
 #add_this_id:
 
 # Share
-duoshuo_share: true
+duoshuo_share: false
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -530,7 +531,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: NPXO452Cf2WXPOsJk9C36TJ4-MdYXbMMI
   app_key: hbavG9LDlr4bEH3LQYBm1c0V
 
