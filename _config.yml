@@ -87,7 +87,7 @@ keywords: "Jekyll, NexT"
 rss:
 
 # Specify the date when the site was setup
-since: 2021
+since: 2020
 
 # icon between year and author @Footer
 authoricon: heart
@@ -234,7 +234,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/avatar.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -265,9 +265,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -312,14 +312,14 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
 
 # Post wordcount display settings
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  wordcount: true
+  #min2read: true
   separated_meta: true
 
 # Wechat Subscriber
@@ -354,7 +354,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night bright
 
 
 # ---------------------------------------------------------------
@@ -371,10 +371,10 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-swiftype_key: ejzXADyBomBd4f_Cam8n
+# swiftype_key: ejzXADyBomBd4f_Cam8n
 
 # Baidu Analytics ID
-baidu_analytics: 681e8ab3f6ae4ad2b3453b6d91601aa8
+#baidu_analytics: 681e8ab3f6ae4ad2b3453b6d91601aa8
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -528,9 +528,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: NPXO452Cf2WXPOsJk9C36TJ4-MdYXbMMI
+  app_key: hbavG9LDlr4bEH3LQYBm1c0V
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -591,7 +591,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
