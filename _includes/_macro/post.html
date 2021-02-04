@@ -102,7 +102,7 @@
                 {% assign cat_url_encode = cat | url_encode | replace: '+', '%20' %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" itemprop="url" rel="index">
-                    <span itemprop="name">{{ cat }}&nbsp;</span>
+                    <span itemprop="name">{{ cat }}</span>
                   </a>
                 </span>
 
@@ -264,14 +264,14 @@
                 <span class="post-meta-item-text">{{ __.post.tag }}</span>
               {% endif %}
               {% for tag in post.tags %}
-                {% assign cat_url_encode = tag | url_encode | replace: '+', '%20' %}
+                {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" itemprop="url" rel="index">
-                    <span itemprop="name">{{ tag }}&nbsp;</span>
+                  <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" itemprop="url" rel="tag">
+                    <span itemprop="name">{{ tag }}</span>
                   </a>
                 </span>
 
-                {% assign tag_length = post.tag.size %}
+                {% assign tag_length = post.tags.size %}
                 {% if tag_length > 1 and forloop.index != tag_length %}
                   {{ __.symbol.comma }}
                 {% endif %}

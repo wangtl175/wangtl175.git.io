@@ -9,6 +9,8 @@ comments: false
 
 记录博客的搭建、更新过程，以便学习和后期维护。
 
+{% raw %}
+
 ### 2021-02-03
 
 #### 搭建成功
@@ -40,8 +42,6 @@ comments: false
 
 3. 修改\_includes\\\_macro\post.html文件，下面那一段删掉
 
-    {% raw %}
-
     ```html
     {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false%}
               <div class="post-tags">
@@ -66,13 +66,14 @@ comments: false
           <span class="post-meta-item-text">{{ __.post.tag }}</span>
         {% endif %}
         {% for tag in post.tags %}
-          {% assign cat_url_encode = tag | url_encode | replace: '+', '%20' %}
+          {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
           <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-            <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" itemprop="url" rel="index">
-              <span itemprop="name">{{ tag }}&nbsp;</span>
+            <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" itemprop="url" rel="tag">
+              <span itemprop="name">{{ tag }}</span>
             </a>
           </span>
-          {% assign tag_length = post.tag.size %}
+    
+          {% assign tag_length = post.tags.size %}
           {% if tag_length > 1 and forloop.index != tag_length %}
             {{ __.symbol.comma }}
           {% endif %}
@@ -80,8 +81,6 @@ comments: false
       </span>
     {% endif %}
     ```
-
-    {% endraw %}
 
 4. 删掉\_sass\\\_schemes\Mist\\\_posts-expanded.scss文件里的
 
@@ -97,4 +96,4 @@ comments: false
       }
     ```
 
-    
+    {% endraw %}
