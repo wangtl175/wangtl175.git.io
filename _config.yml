@@ -76,7 +76,7 @@ plugins:
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `assets/` directory.
-favicon: /assets/favicon.ico
+favicon: /assets/favicon.png
 
 # Set default keywords (Use a comma to separate)
 keywords: "Jekyll, NexT"
@@ -278,7 +278,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button
-  scrollpercent: false
+  scrollpercent: true
 
 
 # Blog rolls
@@ -314,6 +314,7 @@ post_meta:
   created_at: true
   updated_at: true
   categories: true
+  tags: true
 
 
 # Post wordcount display settings
@@ -331,7 +332,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -619,7 +620,7 @@ use_motion: true
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce

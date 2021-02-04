@@ -102,7 +102,7 @@
                 {% assign cat_url_encode = cat | url_encode | replace: '+', '%20' %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" itemprop="url" rel="index">
-                    <span itemprop="name">{{ cat }}</span>
+                    <span itemprop="name">{{ cat }}&nbsp;</span>
                   </a>
                 </span>
 
@@ -254,6 +254,31 @@
             </div>
           {% endif %}
 
+          {% if post.tags and post.tags.size !=0 and site.post_meta.tags %}
+            <span class="post-category" >
+              <br>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-tag"></i>
+              </span>
+              {% if site.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __.post.tag }}</span>
+              {% endif %}
+              {% for tag in post.tags %}
+                {% assign cat_url_encode = tag | url_encode | replace: '+', '%20' %}
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" itemprop="url" rel="index">
+                    <span itemprop="name">{{ tag }}&nbsp;</span>
+                  </a>
+                </span>
+
+                {% assign tag_length = post.tag.size %}
+                {% if tag_length > 1 and forloop.index != tag_length %}
+                  {{ __.symbol.comma }}
+                {% endif %}
+              {% endfor %}
+            </span>
+          {% endif %}
+
           {% unless site.excerpt_description and is_index %}
             {% if site.description %}
                 <div class="post-description">
@@ -261,7 +286,6 @@
                 </div>
             {% endif %}
           {% endunless %}
-
         </div>
       </header>
     {% endunless %}
@@ -350,14 +374,15 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
+      <!--把标签移到post-header
+      {% if post.tags and post.tags.size != 0 %}
         <div class="post-tags">
           {% for tag in post.tags %}
             {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
 	    <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" rel="tag"><i class="fa fa-tag"></i> {{ tag }}</a>
           {% endfor %}
         </div>
-      {% endif %}
+      {% endif %}-->
 
       {% unless is_index %}
       {% if site.vkontakte_api.enable and site.vkontakte_api.like %}
