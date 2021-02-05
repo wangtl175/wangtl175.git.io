@@ -1,6 +1,7 @@
 ---
+title: about
 layout: page
 type: about
 ---
 
-# Email: 3027192105@qq.com
+### Email: 3027192105@qq.com
