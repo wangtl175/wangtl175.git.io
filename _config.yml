@@ -423,7 +423,7 @@ valine_comment:
   leancloud_appid: NPXO452Cf2WXPOsJk9C36TJ4-MdYXbMMI
   leancloud_appkey: hbavG9LDlr4bEH3LQYBm1c0V
   placeholder: "留下你的评论吧（支持Markdown）~"
-  #visitor: true
+  visitor: true  # 统计每篇文章的阅读量
   #comment_count: true
 # Gentie productKey
 #gentie_productKey:
