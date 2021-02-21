@@ -3,7 +3,7 @@ title: C++函数的缺省参数
 date: 2021-02-06 00:00:00
 updated: 2021-02-06 00:00:00
 categories:
-- C++/函数
+- C++/function
 tags:
 - C++
 ---
