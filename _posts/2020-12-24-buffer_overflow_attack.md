@@ -1,7 +1,7 @@
 ---
 title: 缓冲区溢出攻击
 date: 2020-12-24 21:09:30
-updated: 2021-02-03 21:09:30
+updated: 2021-03-08 21:09:30
 categories:
 - SYSU/HW/信息安全
 tags:
@@ -45,7 +45,7 @@ int fun(int a, int b) {
     int l[3];
     l[0] = a;
     l[1] = b;
-    l[3] = a + b;
+    l[2] = a + b;
 }
 int main() {
     fun(1, 2);
