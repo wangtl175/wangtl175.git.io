@@ -1,8 +1,7 @@
 ---
 title: n的阶乘结果后面有多少个0
 date: 2021-03-20 10:00:00
-updated: 2021-03- 10:00:00
-categories:
+updated: 2021-03-20 10:00:00
 - leetcode
 tags:
 - leetcode
