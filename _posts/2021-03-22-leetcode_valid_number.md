@@ -15,7 +15,7 @@ tags:
 
 ## DFA
 
-![IMG_0583](2021-03-22-leetcode_valid_number.assets/IMG_0583.PNG)
+<img src="https://github.com/wangtl175/wangtl175.github.io/blob/master/_posts/2021-03-22-leetcode_valid_number.assets/IMG_0583.PNG" alt="yQze0I.png" style="zoom:80%;"/>
 
 ## 代码
 
